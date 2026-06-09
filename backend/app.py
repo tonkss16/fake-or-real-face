@@ -24,9 +24,12 @@ def allowed_file(filename: str) -> bool:
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+@app.get("/")
+def home():
+    return jsonify({"status": "ok"})
 
 # Load model 1 lần khi app start (đúng rồi, đỡ tốn thời gian)
-predictor = load_model(PTH_PATH)
+#predictor = load_model(PTH_PATH)
 
 
 @app.get("/health")
