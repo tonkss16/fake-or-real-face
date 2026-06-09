@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Image Checker</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <h2 style="color: rgb(9, 168, 168);">
+    Tải lên một hình ảnh để xem hình ảnh đó có được tạo ra hay thay đổi bởi AI không.
+  </h2>
+
+    <input type="file" id="imageInput" accept="image/*" />
+    <div id="placeholderText">Nhấn để tải ảnh</div>
+    <img id="preview" style="display:none;" />
+    <div id="result"></div>
+  </div>
+
+  <button id="detectBtn" type="button" disabled>Chạy phát hiện AI</button>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
