@@ -56,7 +56,7 @@ async function runPredict() {
     const fd = new FormData();
     fd.append("image", selectedFile, selectedFile.name || "pasted.png");
 
-    const res = await fetch("http://127.0.0.1:5000/predict", {
+    const res = await fetch("https://fake-or-real-face.onrender.com/predict", {
       method: "POST",
       body: fd,
       cache: "no-store"
